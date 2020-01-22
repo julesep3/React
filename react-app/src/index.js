@@ -1,5 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+const person = {
+    name: 'Mosh',
+    walk() {
+        console.log(this);
+    }
+};
 
-const element = <h1>Hello World</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+person.walk();
+
+const walk = person.walk.bind(person);
+console.log(walk);
